@@ -1,6 +1,6 @@
 import axios from "axios";
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import {Shipment} from "../types/types"
+import { Shipment } from "../types/types"
 
 export const getTrackingOrders = createAsyncThunk<any, number>(
     "bosta/getstatus",
@@ -21,21 +21,21 @@ export const getTrackingOrders = createAsyncThunk<any, number>(
   );
   
   interface InitialState{
-    trackingOrdersNums: Shipment ;
+    shippings: Shipment ;
     loading:boolean;
     isSuccess:boolean|null;
     errors:boolean|null;
   }
   
   const initialState:InitialState = {
-    trackingOrdersNums: {} as Shipment ,
+    shippings: {} as Shipment ,
     loading: true,
     isSuccess: null,
     errors: null,
   };
 
   const trackingOrderSlice = createSlice({
-    name: "trakingOrder",
+    name: "shipping",
     initialState,
     reducers: {},
     extraReducers(builder) {
