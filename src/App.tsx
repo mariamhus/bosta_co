@@ -1,11 +1,24 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import axios from 'axios'
 
 function App() {
   const [count, setCount] = useState(0)
+  // const [res,setRes] = useState<any>()
 
+
+  useEffect(()=>{
+
+    (async ()=>{
+      const result = await axios.get('https://tracking.bosta.co/shipments/track/7234258');
+      // setRes(result)
+  
+      console.log({result})
+
+    })();
+  },[])
   return (
     <>
       <div>
