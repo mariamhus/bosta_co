@@ -6,7 +6,7 @@ function Shipping(props:{
 }) {
   return (
     <div>
-      <div className="outline m-5 p-5">
+      <div className="outline p-5">
         <div className="flex flex-row justify-between">
           <div className="flex flex-col">
             <div className="font-thin text-gray-400">

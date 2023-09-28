@@ -1,10 +1,7 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Shipping from './Shipping';
 import OrderDetails from "../components/OrderDetails"
 import Address from "../components/Address";
-import { store } from "../stores/store";
-import { getTrackingOrders } from "../slice/bosta_slice";
-
 import axios from "axios";
 import { Shipment, PackageState  } from "../types/types";
 
