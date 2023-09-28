@@ -1,41 +1,45 @@
-import React, {useEffect,useState} from 'react'
 import StatusBar from "../components/StatusBar";
-import { store } from '../stores/store';
-import { getTrackingOrders } from '../slice/bosta_slice';
-import {Shipment} from "../types/types"
-import axios from 'axios'
+import { Shipment } from "../types/types";
 
-function Shipping() {
-  const [trackingNumber, setTrackingNumber] = useState(7234258)
-
-  const [shippingOrder,setShippingOrder ] = useState<Shipment>()
-//   useEffect(()=>{
-// (async()=>{
-//   const result = await store.dispatch(getTrackingOrders());
-//   console.log({result})
-//   // if(result.meta.requestStatus==="fulfilled"){
-//   // }
-// })
-//   },[])
-
-  useEffect(()=>{
-    (async ()=>{
-      const result = await axios.get('https://tracking.bosta.co/shipments/track/7234258');
-      // setRes(result)
-      setShippingOrder(result?.data)
-      console.log({result})
-
-    })();
-  },[])
-  console.log(shippingOrder)
-
+function Shipping(props:{
+  OrderData:Shipment;
+}) {
   return (
     <div>
-
-      Tracking Orders & Shipping
-      {/* <StatusBar/> */}
+      <div className="outline m-5 p-5">
+        <div className="flex flex-row justify-between">
+          <div className="flex flex-col">
+            <div className="font-thin text-gray-400">
+              Tracking Number {props?.OrderData?.TrackingNumber}
+            </div>
+            <div className="font-bold text-red-600">
+              {props?.OrderData?.CurrentStatus?.state}
+            </div>
+          </div>
+          <div className="flex flex-col">
+            <p className="font-thin text-gray-400">
+              Latest Update
+            </p>
+            <div className="font-bold">
+              {new Date(props?.OrderData?.CreateDate).toLocaleString()}
+            </div>
+          </div>
+          <div className="flex flex-col">
+            <p className="font-thin text-gray-400">Provider</p>
+            <div className="font-bold">{props?.OrderData?.provider}</div>
+          </div>
+          <div className="flex flex-col">
+            <p className="font-thin text-gray-400">Promised Date</p>
+            <div className="font-bold">{new Date(props?.OrderData?.PromisedDate).toLocaleString()}</div>
+          </div>
+        </div>
+        <div className=" w-full py-3 border-b-1 border-t border-slate-400 dark:border-darkmode-400"></div>
+        <div className="m-8 py-3">
+          <StatusBar />
+        </div>
+      </div>
     </div>
-  )
+  );
 }
 
 export default Shipping;

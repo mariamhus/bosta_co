@@ -3,5 +3,9 @@
     "prices":"Prices",
     "contact":"Contact Us",
     "follow":"Follow your packages",
-    "login":"Login"
+    "login":"Login",
+    "hub":"Hub",
+    "date":"Date",
+    "time":"Time",
+    "details":"Deatails"
 }

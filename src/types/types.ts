@@ -34,3 +34,10 @@ export interface Shipment {
       dayName: string;
     }[];
   }
+
+  export interface PackageState {
+    state: string;
+    timestamp: string;
+    hub?: string;
+    reason?: string;
+  }
