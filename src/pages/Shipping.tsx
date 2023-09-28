@@ -1,9 +1,13 @@
 import React from 'react'
+import StatusBar from "../components/StatusBar";
 
 function Shipping() {
   return (
     <div>
-      Tracking Orders
+
+      Tracking Orders & Shipping
+
+      <StatusBar/>
     </div>
   )
 }

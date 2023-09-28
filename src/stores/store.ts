@@ -1,9 +1,10 @@
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
-import trackingOrderSlice from "../slice/Bosta-Slice"
-
+import trackingOrderSlice from "../slice/bosta_slice"
+import langReducer from '../slice/lang_slice';
 
 export const store = configureStore({
     reducer: {
+      lang: langReducer,
         shipping: trackingOrderSlice,
     },
 });

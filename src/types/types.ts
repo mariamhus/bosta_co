@@ -1,3 +1,16 @@
+export const SET_LANGUAGE ='SET_LANGUAGE';
+
+export interface langState {
+language:string;
+}
+
+interface SetLanguageAction {
+    type: typeof SET_LANGUAGE;
+    payload: string;
+}
+
+export type LangAction = SetLanguageAction;
+
 export interface Shipment {
     provider: string;
     CurrentStatus: {
