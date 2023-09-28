@@ -11,7 +11,7 @@ function HomePage() {
   useEffect(() => {
     (async () => {
       const result = await axios.get(
-        "https://tracking.bosta.co/shipments/track/7234258"
+        "https://tracking.bosta.co/shipments/track/2259635"
       );
       setShippingOrder(result?.data);
       setPackageDetails(result?.data?.TransitEvents)

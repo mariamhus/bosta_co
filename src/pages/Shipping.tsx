@@ -21,7 +21,7 @@ function Shipping(props:{
               Latest Update
             </p>
             <div className="font-bold">
-              {new Date(props?.OrderData?.CreateDate).toLocaleString()}
+              {new Date(props?.OrderData?.CurrentStatus?.timestamp).toLocaleString()}
             </div>
           </div>
           <div className="flex flex-col">
@@ -35,7 +35,7 @@ function Shipping(props:{
         </div>
         <div className=" w-full py-3 border-b-1 border-t border-slate-400 dark:border-darkmode-400"></div>
         <div className="m-8 py-3">
-          <StatusBar />
+          <StatusBar status={props?.OrderData?.CurrentStatus?.state}/>
         </div>
       </div>
     </div>

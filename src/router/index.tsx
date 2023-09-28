@@ -1,6 +1,5 @@
 import { useRoutes } from "react-router-dom";
 import ErrorPage from "../pages/ErrorPage";
-import Shipping from "../pages/Shipping";
 import HomePage from "../pages/HomePage";
 import Prices from "../pages/Prices";
 import ContactUs from "../pages/ContactUs";
@@ -17,16 +16,12 @@ function Router(){
             element:<HomePage/>
         },
         {
-            path:"/prices",
+            path:"#",
             element:<Prices/>
         },
         {
-            path:"/contact-us",
+            path:"#",
             element:<ContactUs/>
-        },
-        {
-            path:"/:trackingNumber",
-            element:<Shipping/>
         },
         {
             path: "/error-page",
