@@ -1,13 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { useAppSelector } from '../../stores/hooks';
-import { RootState } from '../../stores/store';
-import { translate } from "../../i18next";
-import LanguageSwicher from "../LanguageSwicher"
+// import { useAppSelector } from '../../stores/hooks';
+// import { RootState } from '../../stores/store';
+// import { translate } from "../../i18next";
+// import LanguageSwicher from "../LanguageSwicher"
 function Main() {
-  const { language } = useAppSelector((state: RootState) => state.lang);
+  // const { language } = useAppSelector((state: RootState) => state.lang);
 
-  console.log({language})
+  // console.log({language})
     const listHeader = ["home","prices","contact","follow","login"];
 
     return (
