@@ -5,8 +5,7 @@ function Shipping(props:{
   OrderData:Shipment;
 }) {
   return (
-    <div>
-      <div className="outline p-5">
+      <div className="outline w-full p-5">
         <div className="flex flex-row justify-between">
           <div className="flex flex-col">
             <div className="font-thin text-gray-400">
@@ -38,7 +37,6 @@ function Shipping(props:{
           <StatusBar status={props?.OrderData?.CurrentStatus?.state}/>
         </div>
       </div>
-    </div>
   );
 }
 

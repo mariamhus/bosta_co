@@ -24,10 +24,10 @@ function HomePage() {
     <div className="flex flex-col space-y-5">
       <Shipping OrderData={shippingOrder}/>
       <div className="flex space-x-3 ">
-      <Address/>
       <div className="mr-5">
         <OrderDetails packageDetails={PackageDetails}/>
       </div>
+      <Address/>
       </div>
     </div>
   )

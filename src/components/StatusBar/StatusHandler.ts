@@ -8,7 +8,7 @@ export const statusHandler = (status: string) => {
   
         case "PACKAGE_RECEIVED":
         return {
-          progress:44,
+          progress:50,
           color:"yellow",
         }
 
@@ -20,7 +20,7 @@ export const statusHandler = (status: string) => {
 
       case "WAITING_FOR_CUSTOMER_ACTION":
         return {
-          progress:70,
+          progress:75,
           color:"yellow",
         } 
   

@@ -7,5 +7,12 @@
     "hub":"الفرع",
     "date":"التاريخ",
     "time":"الوقت",
-    "details":"تفاصيل"
+    "details":"تفاصيل",
+    "orderCreated":"تم انشاء الشحنة",
+    "orderReceived":"تم استلام الشحنة من التاجر",
+    "orderDelivery":"الشحنة خرجت للتسليم",
+    "orderHanded":"تم التسليم",
+    "report":"إبلاغ عن مشكلة",
+    "havingAnIssue":"هل يوجد مشكلة في شحنتك؟"
+
 }

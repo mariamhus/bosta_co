@@ -7,5 +7,11 @@
     "hub":"Hub",
     "date":"Date",
     "time":"Time",
-    "details":"Deatails"
+    "details":"Deatails",
+    "orderCreated":"Order Created",
+    "orderReceived":"order received from merchant",
+    "orderDelivery":"Order out for delivery",
+    "orderHanded":"Order Received",
+    "report":"Report a problem",
+    "havingAnIssue":"Having an issue?"
 }

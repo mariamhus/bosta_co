@@ -1,57 +1,86 @@
 import "react-step-progress-bar/styles.css";
 import { ProgressBar, Step } from "react-step-progress-bar";
 import { statusHandler } from "./StatusHandler";
+import { translate } from "../../i18next";
+import { useAppSelector } from "../../stores/hooks";
 
 function Main(props: { status: string }) {
+  const { language } = useAppSelector((state) => state.lang);
   const current_state = statusHandler(props?.status);
   return (
+    <div className="text-center px-5">
+
     <ProgressBar
       percent={current_state?.progress}
       filledBackground={current_state?.color}
     >
       <Step transition="scale">
-        {({ accomplished }: any) => (
-          <img
-            style={{ filter: `grayscale(${accomplished ? 0 : 80}%)` }}
-            width="30"
-            src="https://vignette.wikia.nocookie.net/pkmnshuffle/images/9/9d/Pichu.png/revision/latest?cb=20170407222851"
-          />
+        {({ accomplished,index }: any) => (
+          <div
+          className={`w-8 translate-y-3 indexedStep ${
+            accomplished ? "accomplished" : null
+          }`}
+        >
+          <div
+      className={`indexedStep ${accomplished ? "accomplished" : null}`}
+    >
+      {index + 1}
+    </div>{" "}
+          <p className="whitespace-nowrap -translate-x-5">{translate("orderCreated",language)}</p>
+        </div>
         )}
       </Step>
       <Step transition="scale">
-        {({ accomplished }: any) => (
-          <img
-            style={{ filter: `grayscale(${accomplished ? 0 : 80}%)` }}
-            width="30"
-            src="https://vignette.wikia.nocookie.net/pkmnshuffle/images/9/97/Pikachu_%28Smiling%29.png/revision/latest?cb=20170410234508"
-          />
-        )}
+        {({ accomplished,index }: any) => (
+          <div
+          className={`w-8 translate-y-3 indexedStep ${
+            accomplished ? "accomplished" : null
+          }`}
+        >
+          <div
+      className={`indexedStep ${accomplished ? "accomplished" : null}`}
+    >
+      {index + 1}
+    </div>{" "}
+          <p className="whitespace-nowrap -translate-x-5">{translate("orderReceived",language)}</p>
+        </div>
+            )}
       </Step>
       <Step transition="scale">
-        {({ accomplished }: any) => (
-          <img
-            style={{ filter: `grayscale(${accomplished ? 0 : 80}%)` }}
-            width="30"
-            src="https://vignette.wikia.nocookie.net/pkmnshuffle/images/9/97/Pikachu_%28Smiling%29.png/revision/latest?cb=20170410234508"
-          />
+        {({ accomplished,index }: any) => (
+          <div
+          className={`w-8 translate-y-3 indexedStep ${
+            accomplished ? "accomplished" : null
+          }`}
+        >
+          <div
+      className={`indexedStep ${accomplished ? "accomplished" : null}`}
+    >
+      {index + 1}
+    </div>{" "}
+          <p className="whitespace-nowrap -translate-x-5">{translate("orderDelivery",language)}</p>
+        </div>
+        
         )}
       </Step>
       <Step>
-        {({ accomplished}: any) => (
+        {({ accomplished, index }: any) => (
           <div
-            className={`w-8 indexedStep ${
+            className={`w-8 translate-y-3 indexedStep ${
               accomplished ? "accomplished" : null
             }`}
           >
-            <img
-              style={{ filter: `grayscale(${accomplished ? 0 : 80}%)` }}
-              className="w-full"
-              src="https://vignette.wikia.nocookie.net/pkmnshuffle/images/9/97/Pikachu_%28Smiling%29.png/revision/latest?cb=20170410234508"
-            />{" "}
+            <div
+        className={`indexedStep ${accomplished ? "accomplished" : null}`}
+      >
+        {index + 1}
+      </div>{" "}
+            <p className="whitespace-nowrap -translate-x-5">{translate("orderHanded",language)}</p>
           </div>
         )}
       </Step>
     </ProgressBar>
+            </div>
   );
 }
 
