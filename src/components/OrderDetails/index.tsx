@@ -1,4 +1,3 @@
-import React from 'react'
 import { PackageState  } from "../../types/types";
 import { translate } from "../../i18next";
 import { useAppSelector } from '../../stores/hooks';

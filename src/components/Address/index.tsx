@@ -1,4 +1,3 @@
-import React from "react";
 import { translate } from "../../i18next";
 import { useAppSelector } from "../../stores/hooks";
 // style={{direction:"rtl"}}

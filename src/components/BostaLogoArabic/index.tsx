@@ -1,5 +1,3 @@
-import React from "react";
-
 function Main() {
   return (
       <span role="img" className="w-28 m-3">

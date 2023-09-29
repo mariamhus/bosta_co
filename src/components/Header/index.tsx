@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { translate } from "../../i18next";
 import { useAppDispatch, useAppSelector } from "../../stores/hooks";
@@ -33,7 +33,7 @@ function Main() {
           {language}
         </button>
         <div className="lg:hidden">
-        <button type="button" onClick={e=>setMobileMenu(!mobileMenu)} className="-m-2.5 rounded-md p-2.5 text-gray-700 m-4">
+        <button type="button" onClick={()=>setMobileMenu(!mobileMenu)} className="rounded-md p-2.5 text-gray-700 m-4">
         <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path>
         </svg>
@@ -84,7 +84,7 @@ function Main() {
             ) : (
               <BostaLogoArabic />
             )}
-        <button type="button" onClick={e=>setMobileMenu(!mobileMenu)} className="-m-2.5 rounded-md p-2.5 text-gray-700">
+        <button type="button" onClick={()=>setMobileMenu(!mobileMenu)} className="-m-2.5 rounded-md p-2.5 text-gray-700">
           <span className="sr-only">Close menu</span>
           <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
