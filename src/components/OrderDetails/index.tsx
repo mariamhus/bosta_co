@@ -8,11 +8,11 @@ function Main(props:{
     const { language } = useAppSelector((state) => state.lang);
   return (
     <>
-    <div className="flex flex-col mr-5">
+    <div className="flex flex-col mr-5 overflow-x-scroll ">
     <h3 className="ml-6 text-left font-bold text-base">{translate("OrderDetails",language)}</h3>
-      <div className="overflow-x-auto">
+      <div className="">
         <div className="p-1.5 w-full inline-block align-middle">
-          <div className="overflow-hidden border rounded-lg">
+          <div className="border rounded-lg">
             <table className="table-auto min-w-full divide-y divide-gray-200">
               <thead className="bg-gray-50">
                 <tr>
