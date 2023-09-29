@@ -8,7 +8,7 @@ function Main(props:{
     const { language } = useAppSelector((state) => state.lang);
   return (
     <>
-    <div className="flex flex-col">
+    <div className="flex flex-col mr-5">
     <h3 className="ml-6 text-left font-bold text-base">Order Details</h3>
       <div className="overflow-x-auto">
         <div className="p-1.5 w-full inline-block align-middle">
@@ -46,16 +46,16 @@ function Main(props:{
               <tbody className="divide-y divide-gray-200">
                 {props?.packageDetails?.map((packageDetail,index)=>(
                 <tr key={index}>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-800 whitespace-nowrap">
+                  <td className="px-6 py-4 text-sm font-medium text-gray-800 whitespace-wrap">
                     {packageDetail?.hub? packageDetail?.hub : "_"}
                   </td>
-                  <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">
+                  <td className="px-6 py-4 text-sm text-gray-800 whitespace-wrap">
                     {new Date(packageDetail?.timestamp).toLocaleDateString()}
                   </td>
-                  <td className="px-6 py-4 text-sm font-medium text-right whitespace-nowrap">
+                  <td className="px-6 py-4 text-sm font-medium text-right whitespace-wrap">
                   {new Date(packageDetail?.timestamp).toLocaleTimeString()}
                   </td>
-                  <td className="px-6 py-4 text-sm font-medium text-right whitespace-nowrap">
+                  <td className="px-6 py-4 text-sm font-medium text-right whitespace-wrap">
                     {packageDetail?.state}
                     {packageDetail?.reason? <p className='text-sm text-red-600'>{packageDetail?.reason}</p> : null}
                   </td>
