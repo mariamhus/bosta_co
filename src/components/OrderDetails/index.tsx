@@ -9,11 +9,11 @@ function Main(props:{
   return (
     <>
     <div className="flex flex-col">
-    <h3 className="ml-6 text-left">Order Details</h3>
+    <h3 className="ml-6 text-left font-bold text-base">Order Details</h3>
       <div className="overflow-x-auto">
         <div className="p-1.5 w-full inline-block align-middle">
           <div className="overflow-hidden border rounded-lg">
-            <table className="min-w-full divide-y divide-gray-200">
+            <table className="table-auto min-w-full divide-y divide-gray-200">
               <thead className="bg-gray-50">
                 <tr>
                   <th

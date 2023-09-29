@@ -5,7 +5,7 @@ function Shipping(props:{
   OrderData:Shipment;
 }) {
   return (
-      <div className="outline w-full p-5">
+      <div className="outline outline-gray-100 rounded-md w-full p-5">
         <div className="flex flex-row justify-between">
           <div className="flex flex-col">
             <div className="font-thin text-gray-400">

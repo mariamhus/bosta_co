@@ -2,7 +2,8 @@
     "home":"Home",
     "prices":"Prices",
     "contact":"Contact Us",
-    "follow":"Follow your packages",
+    "trackingnumber":"tracking number",
+    "follow":"Track your order",
     "login":"Log in",
     "hub":"Hub",
     "date":"Date",
@@ -13,5 +14,6 @@
     "orderDelivery":"Order out for delivery",
     "orderHanded":"Order Received",
     "report":"Report a problem",
-    "havingAnIssue":"Having an issue?"
+    "havingAnIssue":"Having an issue?",
+    "address":"Egypt, Cairo, Imbaba, Talaat Harb street, block 22 home 17"
 }

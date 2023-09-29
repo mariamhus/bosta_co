@@ -6,12 +6,10 @@ function Main() {
 
   return (
     <div className="flex flex-col gap-3 max-w-sm sm:max-h-min w-full lg:max-w-full lg:flex">
-      <p className="ml-6 text-left" >Shipping address</p>
+      <p className="ml-6 text-left font-bold text-base" >Shipping address</p>
       <div className="border-r border-b border-l rounded-sm border-gray-300  lg:border-t lg:border-gray-300 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
         <p className="text-gray-700 text-base">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
-          quia, nulla! Maiores et perferendis eaque, exercitationem praesentium
-          nihil.
+          {translate("address", language)}
         </p>
       </div>
       <div className="flex w-full border-r p-5 items-center border-b border-l  border-gray-300  lg:border-t lg:border-gray-300 bg-white rounded-b lg:rounded-b-none lg:rounded-r">
