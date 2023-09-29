@@ -23,7 +23,7 @@ function HomePage() {
   return (
     <div className="flex flex-col space-y-5">
       <Shipping OrderData={shippingOrder} />
-      <div className="flex lg:flex-row gap-2 lg:items-baseline sm:flex-col sm:items-center">
+      <div className="flex lg:flex-row gap-2 lg:items-baseline md:flex-col md:items-center sm:flex-col sm:items-center">
         <OrderDetails packageDetails={PackageDetails} />
         <Address />
       </div>
