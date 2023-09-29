@@ -17,6 +17,10 @@
     "havingAnIssue":"Having an issue?",
     "address":"Egypt, Cairo, Imbaba, Talaat Harb street, block 22 home 17",
     "OrderDetails":"Order Details",
-    "Shipping address":"Shipping address"
+    "Shipping address":"Shipping address",
+    "Tracking Number":"Tracking Number",
+    "Latest Update":"Latest Update",
+    "Provider":"Provider",
+    "Promised Date":"Promised Date"
 
 }

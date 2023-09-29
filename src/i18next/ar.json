@@ -17,5 +17,9 @@
     "havingAnIssue":"هل يوجد مشكلة في شحنتك؟",
     "address":"مصر ، القاهرة ، امبابة، شارع طلعت حرب مدينة العمال بجوار البرنس منزل ١٧ بلوك ٢٢",
     "OrderDetails":"تفاصيل الشحنة",
-"Shipping address":"عنوان التسليم"
+"Shipping address":"عنوان التسليم",
+"Tracking Number":"رقم الشحنة",
+    "Latest Update":"آخر تحديث",
+    "Provider":"اسم التاجر",
+    "Promised Date":"موعد تسليم خلال"
 }
