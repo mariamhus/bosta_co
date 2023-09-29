@@ -15,5 +15,8 @@
     "orderHanded":"Order Received",
     "report":"Report a problem",
     "havingAnIssue":"Having an issue?",
-    "address":"Egypt, Cairo, Imbaba, Talaat Harb street, block 22 home 17"
+    "address":"Egypt, Cairo, Imbaba, Talaat Harb street, block 22 home 17",
+    "OrderDetails":"Order Details",
+    "Shipping address":"Shipping address"
+
 }

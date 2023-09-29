@@ -16,6 +16,10 @@ function Router(){
             element:<HomePage/>
         },
         {
+            path:"/:id",
+            element:<HomePage/>
+        },
+        {
             path:"#",
             element:<Prices/>
         },

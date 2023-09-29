@@ -2,15 +2,15 @@ import axios from "axios";
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { Shipment } from "../types/types"
 
-export const getTrackingOrders = createAsyncThunk<any>(
+export const getTrackingOrders = createAsyncThunk<any,any>(
     "bosta/getstatus",
-    async ( _ , thunkAPI) => {
+    async ( id , thunkAPI) => {
       const { rejectWithValue } = thunkAPI;
       try {
         const response = await axios.get
         (
-            `https://tracking.bosta.co/shipments/track/7234258`)
-            console.log(response.data);
+            `https://tracking.bosta.co/shipments/track/${id}`)
+            console.log("sliceeeeeeeee ", response.data);
         return response.data;
       } catch ({ response } : any ) {
         if (response.status === 400 || response.status === 401) {

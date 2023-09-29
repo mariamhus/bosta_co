@@ -1,18 +1,25 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { translate } from "../../i18next";
 import { useAppDispatch, useAppSelector } from "../../stores/hooks";
 import { setLanguage } from "../../slice/lang_slice";
 import BostaLogoEnglish from "../BostaLogoEnglish";
 import BostaLogoArabic from "../BostaLogoArabic";
-import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
+import { Popover, Transition } from "@headlessui/react";
+// import { getTrackingOrders } from "../../slice/bosta_slice";
+// import { store } from "../../stores/store";
 
 function Main() {
   const { language } = useAppSelector((state) => state.lang);
   const dispatch = useAppDispatch();
   const [mobileMenu, setMobileMenu] = useState(false);
   const listHeader = ["home", "prices", "contact"];
-
+  const [trackOrderID, setTrackOrderID] = useState<number>();
+  const navigate = useNavigate()
+  const onSubmit = async()=>{
+    navigate(`/${trackOrderID}`)
+    // await store.dispatch(getTrackingOrders(+trackOrderID))
+  }
   return (
     <header className="bg-white">
       <nav
@@ -80,7 +87,6 @@ function Main() {
                 <Popover.Panel className="absolute -left-10 top-full z-10 mt-3 min-w-max max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
                   <div className="p-4">
                     <div className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
-                      <form>
                         <span>{translate("follow", language)}</span>
                         <div className="relative w-full">
                           <input
@@ -88,10 +94,12 @@ function Main() {
                             id="search-dropdown"
                             className="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-l-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500"
                             placeholder={translate("trackingnumber",language)}
-                            required
+                            // required
+                            value={trackOrderID}
+                            onChange={(e:any)=>setTrackOrderID(e.target.value)}
                           />
                           <button
-                            type="submit"
+                            onClick={onSubmit}
                             className="absolute top-0 right-0 p-2.5 text-sm font-medium h-full text-white bg-red-600 rounded-r-lg border border-red-600 hover:bg-red-700 focus:ring-4 focus:outline-none dark:bg-red-500 dark:hover:bg-red-600"
                           >
                             <svg
@@ -111,7 +119,6 @@ function Main() {
                             </svg>
                           </button>
                         </div>
-                      </form>
                     </div>
                   </div>
                 </Popover.Panel>

@@ -5,8 +5,8 @@ function Main() {
   const { language } = useAppSelector((state) => state.lang);
 
   return (
-    <div className="flex flex-col gap-3 max-w-sm sm:max-h-min w-full lg:max-w-full lg:flex">
-      <p className="ml-6 text-left font-bold text-base" >Shipping address</p>
+    <div className="flex flex-col gap-2 max-w-sm sm:max-h-min w-full lg:max-w-1/2 lg:flex">
+      <p className="ml-6 text-left font-bold text-base" >{translate("Shipping address",language)}</p>
       <div className="border-r border-b border-l rounded-sm border-gray-300  lg:border-t lg:border-gray-300 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
         <p className="text-gray-700 text-base">
           {translate("address", language)}
